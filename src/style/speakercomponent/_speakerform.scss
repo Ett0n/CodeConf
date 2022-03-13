@@ -1,0 +1,137 @@
+.sect_formulaire {
+  margin-top: 3rem;
+  padding-bottom: 5rem;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  background-color: $color2;
+  &::before {
+    @include backgroundOverflow;
+  }
+
+  &__title {
+    margin: 4rem 0 0 0;
+    font-family: "maven";
+    font-variation-settings: "wght" 900;
+    color: $mainCta;
+  }
+  &__topic {
+    margin: 2rem 0 4rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__title {
+      margin: 0 0 0.4rem 0;
+      padding: 0;
+    }
+    &__paragraph {
+      font-family: "maven";
+      font-variation-settings: "wght" 300;
+      text-align: center;
+      width: 80%;
+      margin: 0;
+      padding: 0;
+    }
+  }
+  &__form {
+    //border: 3px solid red;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    @media (max-width: $widthPhone) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    width: 85%;
+    gap: 3rem 4rem;
+    div {
+      position: relative;
+    }
+    label {
+      //IL FAUT LES UTILISER POUR L'ASTERISK, PISTE DE SOLUTION: https://codepen.io/arctic_pie/pen/ZabxpP?editors=1100
+      //NECESSITE L'INVERSION DES LABEL/INPUT EN HTML
+      cursor: text;
+      position: absolute;
+      left: 0.5rem;
+      font-family: "maven";
+      font-variation-settings: "wght" 300;
+      &::after {
+        content: "*";
+        color: red;
+      }
+    }
+    span {
+      font-size: 0.5rem;
+      position: absolute;
+      right: 2%;
+      top: 20%;
+      color: #009e60;
+      opacity: 0;
+    }
+    textarea + label + span {
+      top: 10%;
+    }
+
+    input:not(:placeholder-shown) + label,
+    textarea:not(:placeholder-shown) + label {
+      opacity: 0;
+    }
+    .sect_formulaire__form__details label {
+      padding-top: 0.5rem;
+    }
+    input:not(input[type="submit"]) {
+      outline: none;
+      border: none;
+      padding-bottom: 0.2rem;
+      box-shadow: inset 0 -2px 0 -1px grey;
+      &:focus {
+        box-shadow: inset 0 -2.5px 0 -1px $color1;
+      }
+      &:not(:focus):not(:placeholder-shown):invalid {
+        box-shadow: inset 0 -2.5px 0 -1px $mainCta;
+      }
+      &:not(:focus):not(:placeholder-shown):valid + label + span {
+        opacity: 1;
+      }
+    }
+    textarea:not(:focus):not(:placeholder-shown):valid + label + span {
+      opacity: 1;
+    }
+    input,
+    textarea {
+      padding-left: 0.5rem;
+      width: 100%;
+      font-family: "maven";
+      font-variation-settings: "wght" 300;
+      font-size: 1.1rem;
+      &::placeholder {
+        opacity: 0;
+      }
+    }
+
+    &__details,
+    &__submit {
+      grid-column: 1/-1;
+    }
+    &__submit {
+      justify-self: center;
+      input {
+        font-variation-settings: "wght" 500;
+        padding: 1rem 2rem;
+      }
+    }
+    &__details {
+      textarea {
+        padding: 0.5rem;
+        height: 140px;
+        resize: none;
+        outline: none;
+      }
+    }
+  }
+  &__footerh3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: center;
+  }
+}

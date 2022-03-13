@@ -1,0 +1,14 @@
+.fil_ariane {
+  display: flex;
+  padding: 1.5rem 0;
+  align-items: center;
+  gap: 0 0.4rem;
+  &__home,
+  &__speakers {
+    color: inherit;
+    text-decoration: none;
+  }
+  &__home {
+    color: $mainCta;
+  }
+}

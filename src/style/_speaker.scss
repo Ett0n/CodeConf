@@ -1,0 +1,37 @@
+//contient tout les éléments de la page speaker
+//fixe le background et centre header + main
+.body_speaker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background: $color4;
+}
+
+.header,
+.speaker_container,
+.footer {
+  max-width: $widthDesktop;
+  margin: 0rem 2rem;
+  @media (max-width: $widthPhone) {
+    margin: 0 1.5rem;
+  }
+}
+
+@mixin backgroundOverflow {
+  position: absolute;
+  display: block;
+  content: "";
+  background-color: inherit;
+  height: 100%;
+  width: 100vw;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+@import "header";
+@import "speakercomponent/speakerariane";
+@import "speakercomponent/speakerfacesgrid";
+@import "speakercomponent/speakerform";
+@import "footer";

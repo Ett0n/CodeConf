@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Document</title>
+  <style>
+    body {background:#eee;display: grid;min-height: 100vh;margin:0;align-content: center;}
+    @font-face {
+      font-family: "leaguespartan";
+      src: url("LeagueSpartanVariable.woff2") format("woff2-variations"), url("LeagueSpartanVariable.ttf") format("ttf-variations");
+      font-weight: 200 900;
+      font-variation-settings: "wght" 200, "wght" 900;
+    }
+    h1,
+    h2 {
+      margin: 0;
+      font-family: "leaguespartan";
+      text-align: center;
+      font-weight: 200;
+      animation: fontw alternate-reverse 1s infinite;
+      font-size: 8rem;
+      line-height: 0.9;
+      color: #555;
+    }
+    h2 {
+      font-size: 7rem;
+      animation-name: fontw2;
+    }
+    @keyframes fontw {
+      from {
+        /* font-weight: 200; */
+        letter-spacing: 4.2px;
+        font-variation-settings: "wght" 200;
+      }
+      to {
+        /* font-weight: 900; */
+        letter-spacing: 2px;
+        font-variation-settings: "wght" 900;
+      }
+    }
+    @keyframes fontw2 {
+      from {
+        letter-spacing: 4px;
+        font-size: 8rem;
+        font-variation-settings: "wght" 500;
+      }
+      to {
+        font-size: 4rem;
+        letter-spacing: 6.2px;
+        font-variation-settings: "wght" 200;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>hello</h1>
+  <h2>world</h2>
+</body>
+</html>

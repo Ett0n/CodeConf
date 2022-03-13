@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="style/style.min.css" />
+</head>
+
+<body class="body_speaker">
+  <!--container pour mettre un bg, solution alt: translateX sur le bg du form et footer-->
+  <header class="header">
+    <nav class="header__nav">
+      <h2 class="header__title">CodeConf2020</h2>
+      <a href="#" class="header__logo"><img src="img/logos/codeconf2020.svg" alt="CodeConf" /></a>
+      <ul class="header__nav__mobile">
+        <li><a href=""><span class="icon-schedule nav_mobile_schedule"></span></a></li>
+        <li class="nav_mobile_menu_li"><span class="icon-burger nav_mobile_burger"></span><span
+            class="nav_mobile_close hidden">&times;</span></a></li>
+      </ul>
+      <ul class="header__nav__list">
+        <li>
+          <a href=""><span class="icon-schedule icon_schedule_nav"></span>Schedule</a><span
+            class="splitter splitter-nav"></span>
+        </li>
+        <li><a href="" class="header__nav__list__item">Event</a><span class="splitter splitter-nav"></span></li>
+        <li><a href="" class="header__nav__list__item-active">Speakers</a><span class="splitter splitter-nav"></span>
+        </li>
+        <li><a href="" class="header__nav__list__item">Team</a><span class="splitter splitter-nav"></span></li>
+        <li><a href="" class="header__nav__list__item">Contact</a></li>
+        <li>
+          <a href=""><span class="icon-search icon_search_nav"></span></a>
+        </li>
+      </ul>
+    </nav>
+    <div class="header__bandeau">
+      <picture class="header__bandeau__picture">
+        <img class="header__bandeau__img" src="img/speakerspicture/presents@2x.png" alt="" />
+      </picture>
+      <div class="header__bandeau__text">
+        <h1 class="header__bandeau__title">Speaker <span class="header_break"></span>Edition 2022</h1>
+        <p class="header__bandeau__paragraph">Discover the speakers and the topics or suggest your own topic for our
+          next event</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="speaker_container">
+    <section class="fil_ariane">
+      <a class="fil_ariane__home icon-home" href="#"></a>
+      <span class="splitter splitter-fade"></span>
+      <a href="" class="fil_ariane__speakers">Speakers</a>
+    </section>
+    <section class="speaker_all">
+      <!--start first speaker-->
+      <section class="speaker">
+        <picture class="speaker__profile">
+          <img class="speaker__img" src="img/speakerspicture/chris@3x.jpg" alt="Chris Coyler profile picture" />
+        </picture>
+        <div class="speaker__name_container">
+          <h2 class="speaker__name">
+            Chris
+            <strong class="speaker__lastname">Coyler</strong>
+          </h2>
+          <address class="speaker__adress">Milwaukee, WI</address>
+        </div>
+        <section class="speaker__description ">
+          <p class="speaker__description__time"><span class="icon-hour time__icon"></span> 9h30 <span
+              class="splitter splitter-short"></span> R1</p>
+          <h3 class="speaker__description__title">The All-Powerful Front-End Developer</h3>
+          <p class="speaker__description__paragraph">Without servers, we'd have no way to share our creations with the
+            world</p>
+          <button class="speaker__description__about button_secondary">about</button>
+        </section>
+      </section>
+
+      <!--start 2nd speaker-->
+
+      <section class="speaker">
+        <picture class="speaker__profile">
+          <img class="speaker__img" src="img/speakerspicture/sara@3x.jpg" alt="Soueidan Lebanon profile picture" />
+        </picture>
+        <div class="speaker__name_container">
+          <h2 class="speaker__name">
+            Sara
+            <strong class="speaker__lastname">Soueidan</strong>
+          </h2>
+          <address class="speaker__adress">Lebanon</address>
+        </div>
+        <section class="speaker__description ">
+          <p class="speaker__description__time"><span class="icon-hour time__icon"></span> 10h15 <span
+              class="splitter splitter-short"></span> R1</p>
+          <h3 class="speaker__description__title">Going Offline</h3>
+          <p class="speaker__description__paragraph">You can re-visit my Web site even when you’re not connected to the
+            Internet</p>
+          <button class="speaker__description__about button_secondary">about</button>
+        </section>
+      </section>
+
+      <!--start 3rd speaker-->
+
+      <section class="speaker">
+        <picture class="speaker__profile">
+          <img class="speaker__img" src="img/speakerspicture/eric@3x.jpg" alt="Eric Meyer profile picture" />
+        </picture>
+        <div class="speaker__name_container">
+          <h2 class="speaker__name">
+            Eric
+            <strong class="speaker__lastname">Meyer</strong>
+          </h2>
+
+          <address class="speaker__adress">Cleveland, OH</address>
+        </div>
+        <section class="speaker__description ">
+          <p class="speaker__description__time"><span class="icon-hour time__icon"></span> 16h00 <span
+              class="splitter splitter-short"></span> R1</p>
+          <h3 class="speaker__description__title">Faux Grid Tracks</h3>
+          <p class="speaker__description__paragraph">Is it possible to style the rows and columns of a [CSS] grid—the
+            grid itself?</p>
+          <button class="speaker__description__about button_secondary">about</button>
+        </section>
+      </section>
+
+      <!--start 4th speaker-->
+
+      <section class="speaker">
+        <picture class="speaker__profile">
+          <img class="speaker__img" src="img/speakerspicture/lea@3x.jpg" alt="Lea Verou profile picture" />
+        </picture>
+        <div class="speaker__name_container">
+          <h2 class="speaker__name">
+            Lea
+            <strong class="speaker__lastname">Verou</strong>
+          </h2>
+          <address class="speaker__adress">Cambridge, MA</address>
+        </div>
+        <section class="speaker__description ">
+          <p class="speaker__description__time"><span class="icon-hour time__icon"></span> 16h00 <span
+              class="splitter splitter-short"></span> R2</p>
+          <h3 class="speaker__description__title">Mavo</h3>
+          <p class="speaker__description__paragraph">New approachable way to create Web applications</p>
+          <button class="speaker__description__about button_secondary">about</button>
+        </section>
+      </section>
+
+      <!--start 5th speaker-->
+
+      <section class="speaker">
+        <picture class="speaker__profile">
+          <img class="speaker__img" src="img/speakerspicture/shirley@3x.jpg" alt="Chris Coyler profile picture" />
+        </picture>
+        <div class="speaker__name_container">
+          <h2 class="speaker__name">
+            Shirley
+            <strong class="speaker__lastname">Wu</strong>
+          </h2>
+          <address class="speaker__adress">San Francisco, CA</address>
+        </div>
+        <section class="speaker__description ">
+          <p class="speaker__description__time"><span class="icon-hour time__icon"></span> 09h30 <span
+              class="splitter splitter-short"></span> R2</p>
+          <h3 class="speaker__description__title">655 Frustrations Doing Data Visualization</h3>
+          <p class="speaker__description__paragraph">Visualization teams spend more time visualizing than those on
+            embedded teams</p>
+          <button class="speaker__description__about button_secondary">about</button>
+        </section>
+      </section>
+
+      <!--start 6th speaker-->
+
+      <section class="speaker">
+        <picture class="speaker__profile">
+          <img class="speaker__img" src="img/speakerspicture/luke@3x.jpg" alt="Chris Coyler profile picture" />
+        </picture>
+        <div class="speaker__name_container">
+          <h2 class="speaker__name">
+            Luke
+            <strong class="speaker__lastname">Wroblewski</strong>
+          </h2>
+          <address class="speaker__adress">San Francisco, CA</address>
+        </div>
+        <section class="speaker__description ">
+          <p class="speaker__description__time"><span class="icon-hour time__icon"></span> 11h30 <span
+              class="splitter splitter-short"></span> R1</p>
+          <h3 class="speaker__description__title">The Way of the Web</h3>
+          <p class="speaker__description__paragraph">Science fiction is not about predicting the future, but about what
+            we need to have a future</p>
+          <button class="speaker__description__about button_secondary">about</button>
+        </section>
+      </section>
+
+      <!--start 7th speaker-->
+
+      <section class="speaker">
+        <picture class="speaker__profile">
+          <img class="speaker__img" src="img/speakerspicture/nico@3x.jpg" alt="Nicolas Gallagher profile picture" />
+        </picture>
+        <div class="speaker__name_container">
+          <h2 class="speaker__name">
+            Nicolas
+            <strong class="speaker__lastname">Gallagher</strong>
+          </h2>
+          <address class="speaker__adress">San Francisco, CA</address>
+        </div>
+        <section class="speaker__description">
+          <p class="speaker__description__time"><span class="icon-hour time__icon"></span> 14h00 <span
+              class="splitter splitter-short"></span> R1</p>
+          <h3 class="speaker__description__title">Making SVG icon libraries for React apps</h3>
+          <p class="speaker__description__paragraph">Using SVG is currently the best way to create icon libraries for
+            apps</p>
+          <button class="speaker__description__about button_secondary">about</button>
+        </section>
+      </section>
+
+      <!--start 8th speaker-->
+
+      <section class="speaker">
+        <picture class="speaker__profile">
+          <img class="speaker__img" src="img/speakerspicture/rachel@3x.jpg" alt="Rachel Andrew profile picture" />
+        </picture>
+        <div class="speaker__name_container">
+          <h2 class="speaker__name">
+            Rachel
+            <strong class="speaker__lastname">Andrew</strong>
+          </h2>
+          <address class="speaker__adress">Bristol, UK</address>
+        </div>
+        <section class="speaker__description ">
+          <p class="speaker__description__time"><span class="icon-hour time__icon"></span> 15h00 <span
+              class="splitter splitter-short"></span> R1</p>
+          <h3 class="speaker__description__title">Making Things Better</h3>
+          <p class="speaker__description__paragraph">Redefining the Technical Possibilities of CSS</p>
+          <button class="speaker__description__about button_secondary">about</button>
+        </section>
+      </section>
+
+      <!--start 9th speaker-->
+
+      <section class="speaker">
+        <picture class="speaker__profile">
+          <img class="speaker__img" src="img/speakerspicture/stephen@3x.jpg" alt="Stephen Hay profile picture" />
+        </picture>
+        <div class="speaker__name_container">
+          <h2 class="speaker__name">
+            Stephen
+            <strong class="speaker__lastname">Hay</strong>
+          </h2>
+          <address class="speaker__adress">Leeuwarden, NL</address>
+        </div>
+        <section class="speaker__description ">
+          <p class="speaker__description__time"><span class="icon-hour time__icon"></span> 17h00 <span
+              class="splitter splitter-short"></span> R1</p>
+          <h3 class="speaker__description__title">Zero interface thinking</h3>
+          <p class="speaker__description__paragraph">Everything we introduce has the potential to ruin everything. Ask:
+            Is this absolutely necessary?</p>
+          <button class="speaker__description__about button_secondary">about</button>
+        </section>
+      </section>
+
+      <!--start 10th speaker-->
+
+      <section class="speaker">
+        <picture class="speaker__profile">
+          <img class="speaker__img" src="img/speakerspicture/paul@3x.jpg" alt="Paul Irish profile picture" />
+        </picture>
+        <div class="speaker__name_container">
+          <h2 class="speaker__name">
+            Paul
+            <strong class="speaker__lastname">Irish</strong>
+          </h2>
+          <address class="speaker__adress">Palo Alto, CA</address>
+        </div>
+        <section class="speaker__description ">
+          <p class="speaker__description__time"><span class="icon-hour time__icon"></span> 10h30 <span
+              class="splitter splitter-short"></span> R2</p>
+          <h3 class="speaker__description__title">Developer Tooling, lighthouse</h3>
+          <p class="speaker__description__paragraph">Auditing, performance metrics, and best practices for Progressive
+            Web Apps</p>
+          <button class="speaker__description__about button_secondary">about</button>
+        </section>
+      </section>
+
+      <!--start 11th speaker-->
+
+      <section class="speaker">
+        <picture class="speaker__profile">
+          <img class="speaker__img" src="img/speakerspicture/nicole@3x.jpg" alt="Nicole Sullivan profile picture" />
+        </picture>
+        <div class="speaker__name_container">
+          <h2 class="speaker__name">
+            Nicole
+            <strong class="speaker__lastname">Sullivan</strong>
+          </h2>
+          <address class="speaker__adress">San Francisco, CA</address>
+        </div>
+        <section class="speaker__description">
+          <p class="speaker__description__time"><span class="icon-hour time__icon"></span> 11h30 <span
+              class="splitter splitter-short"></span> R2</p>
+          <h3 class="speaker__description__title">OOCSS code standards</h3>
+          <p class="speaker__description__paragraph">Code conventions are important for the long-term maintainability of
+            code</p>
+          <button class="speaker__description__about button_secondary">about</button>
+        </section>
+      </section>
+
+      <!--start 12th speaker-->
+
+      <section class="speaker">
+        <picture class="speaker__profile">
+          <img class="speaker__img" src="img/speakerspicture/brad@3x.jpg" alt="Brad Frost profile picture" />
+        </picture>
+        <div class="speaker__name_container">
+          <h2 class="speaker__name">
+            Brad
+            <strong class="speaker__lastname">Frost</strong>
+          </h2>
+          <address class="speaker__adress">Pittsburgh, PA</address>
+        </div>
+        <section class="speaker__description">
+          <p class="speaker__description__time"><span class="icon-hour time__icon"></span> 10h15 <span
+              class="splitter splitter-short"></span> R2</p>
+          <h3 class="speaker__description__title">Atomic Design</h3>
+          <p class="speaker__description__paragraph">We can construct design systems in a more methodical way</p>
+          <button class="speaker__description__about button_secondary">about</button>
+        </section>
+      </section>
+    </section>
+
+    <!--formulaire-->
+    <section class="sect_formulaire">
+      <h2 class="sect_formulaire__title">BECOME SPEAKER</h2>
+      <section class="sect_formulaire__topic">
+        <h3 class="sect_formulaire__topic__title">Do you have a topic that you like?</h3>
+        <p class="sect_formulaire__topic__paragraph">Submit it for the next event by filling out the form below. Do not
+          forget to specify the subject and the related keywords</p>
+      </section>
+      <form class="sect_formulaire__form" action="">
+        <div class="sect_formulaire__form__name">
+          <input type="text" name="name" id="name" placeholder="name" pattern="[A-Za-z]{4,18}" required />
+          <label for="name">Name</label>
+          <span class="icon-square_full"></span>
+        </div>
+        <div class="sect_formulaire__form__mail">
+          <input type="email" name="mail" placeholder="mail" id="mail" required />
+          <label for="mail">Mail</label>
+          <span class="icon-square_full"></span>
+        </div>
+        <div class="sect_formulaire__form__subject">
+          <input type="text" name="subject" id="subject" placeholder="subject" required />
+          <label for="subject">Subject</label>
+          <span class="icon-square_full"></span>
+        </div>
+        <div class="sect_formulaire__form__keywords">
+          <input type="text" name="keywords" id="keywords" placeholder="keywords" required />
+          <label for="keywords">Keywords</label>
+          <span class="icon-square_full"></span>
+        </div>
+        <div class="sect_formulaire__form__details">
+          <textarea name="details" id="details" placeholder="details" required></textarea>
+          <label for="subject">Short details</label>
+          <span class="icon-square_full"></span>
+        </div>
+        <div class="sect_formulaire__form__submit">
+          <input class="button_secondary" type="submit" value="SEND YOUR SUBJECT" />
+        </div>
+      </form>
+      <h3 class="sect_formulaire__footerh3">or just participate <span class="break">to the present event...</span></h3>
+    </section>
+  </main>
+  <footer class="footer">
+    <button class="footer__button">get ticket <span class="icon-card"></span><span class="icon-paypal"></span></button>
+    <section class="footer__convention">
+      <div class="footer__convention__textcontainer">
+        <h2 class="footer__convention__title">The Las Vegas Convention Center</h2>
+        <address class="footer__convention__adress"><span class="icon-pin"></span>3150 Paradise Rd, Las Vegas, NV
+          89109</address>
+        <p class="footer__convention__paragraph">The Las Vegas Convention Center (LVCC), located adjacent to the Las
+          Vegas Strip, encompasses approximately 3.2 million square feet with exhibit space of 2 million square feet
+          and meeting space of nearly 250,000 square feet.</p>
+      </div>
+      <picture class="footer__convention__picture">
+        <img src="img/picture/lasvegas_conventioncenter.png" alt="Las Vegas Convention Center" />
+      </picture>
+    </section>
+    <section class="footer__sponsors">
+      <ul>
+        <li>
+          <a href=""><img src="img/logos/cisco.svg" alt="Logo Cisco" /></a>
+        </li>
+        <li>
+          <a href=""><img src="img/logos/amazon_s3.svg" alt="Logo Amazon" /></a>
+        </li>
+        <li>
+          <a href=""><img src="img/logos/nick.svg" alt="Logo Nick" /></a>
+        </li>
+        <li>
+          <a href=""><img src="img/logos/meetup.svg" alt="Logo meetup" /></a>
+        </li>
+        <li>
+          <a href=""><img src="img/logos/stripe.svg" alt="Logo stripe" /></a>
+        </li>
+        <li>
+          <a href=""><img src="img/logos/mailchimp.svg" alt="Logo mailchimp" /></a>
+        </li>
+      </ul>
+    </section>
+    <section class="footer__socials">
+      <h3>Follow Us</h3>
+      <ul>
+        <li>
+          <a class="footer__socials__slack" href=""><span class="icon-slack"></span>#codeconf2022</a>
+        </li>
+        <li>
+          <a class="footer__socials__twitter" href=""><span class="icon-tw"></span>@codeconf2022</a>
+        </li>
+      </ul>
+    </section>
+    <section class="footer__helpdesk">
+      <h4>Helpdesk Call-center</h4>
+      <a href="tel:+1 702-892-0711">1 702-892-0711</a>
+      <p class="speak_support">(speaker's support)</p>
+    </section>
+    <section class="footer__copyright">
+      <p>organised by <a target="_blank" href="https://www.webeesmeetups.com/">WeBeesMeetUp.com</a></p>
+      <p class="copyright">copyright 2022</p>
+    </section>
+  </footer>
+  <script src="script/script.js"></script>
+</body>
+
+</html>

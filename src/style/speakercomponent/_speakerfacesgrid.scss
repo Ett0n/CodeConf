@@ -1,0 +1,204 @@
+.speaker_all {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(4, 1fr);
+  @media (max-width: $widthTablet) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+  @media (max-width: $widthPhone) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.speaker {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  &__description {
+    display: none;
+  }
+  &:hover {
+    @media (min-width: $widthTablet) {
+      cursor: pointer;
+      .speaker__profile::before {
+        position: absolute;
+
+        width: 10rem;
+        height: 10rem;
+        border-radius: 50%;
+        background-color: $mainCta;
+        opacity: 0.8;
+        background: radial-gradient(
+          circle,
+          rgba(247, 44, 78, 1) 0%,
+          rgba(247, 44, 78, 1) 50%,
+          rgba(247, 44, 78, 0.1292717770702031) 51%,
+          rgba(247, 44, 78, 0.1292717770702031) 100%
+        );
+
+        //text "more info"
+        content: "more \A info";
+        white-space: pre;
+        color: $color2;
+        font-family: "maven";
+        font-variation-settings: "wght" 300;
+
+        //positionne le texte
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+    }
+  }
+  &__profile {
+    //le flex permet de centrer le pseudo élément du hover
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  &__img {
+    display: inline-block;
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;
+  }
+  &__name,
+  &__lastname {
+    font-weight: 500;
+    display: block;
+    font-size: 1.2rem;
+    margin: 0;
+  }
+  &__adress {
+    font-family: "maven";
+    font-variation-settings: "wght" 300;
+    font-style: normal;
+    color: $mainCta;
+  }
+
+  &__name_container {
+    padding-left: 10%;
+  }
+  @media (max-width: $widthPhone) {
+    display: flex;
+    align-items: center;
+    &__profile {
+      width: 80px;
+      order: 1;
+    }
+    &__img {
+      border-radius: 50rem;
+    }
+    .speaker__name_container {
+      flex-grow: 1;
+      padding-left: 0%;
+    }
+  }
+}
+
+.speaker-active {
+  height: auto;
+  background-color: $color3;
+  padding: 1rem;
+  @media (max-width: $widthTablet) {
+    padding: 0.5rem;
+  }
+  .speaker__profile {
+    @media (min-width: $widthPhone) {
+      display: none;
+    }
+  }
+  &:hover {
+    cursor: auto;
+  }
+  .speaker__adress {
+    display: none;
+  }
+  .speaker__name_container {
+    padding-left: 0%;
+  }
+  .speaker__name {
+    color: $mainCta;
+  }
+  .speaker__lastname {
+    opacity: 0.6;
+  }
+  .speaker__description {
+    min-height: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    &__time,
+    &__title,
+    &__paragraph {
+      flex-basis: 100%;
+      margin: 0;
+    }
+    &__time {
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+      margin-bottom: 0.5rem;
+      font-size: 0.8rem;
+      font-family: "maven";
+      font-variation-settings: "wght" 500;
+      .time__icon {
+        display: none;
+      }
+    }
+    &__title {
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+    }
+    &__paragraph {
+      font-size: 1rem;
+    }
+    &__about {
+      align-self: flex-end;
+      bottom: 5%;
+      border: 1px solid $mainCta;
+      text-align: right;
+      width: 100%;
+      padding: 0.5rem 0.8rem;
+      margin-top: 0.5rem;
+    }
+  }
+  @media (max-width: $widthPhone) {
+    display: flex;
+    align-items: center;
+    .speaker__name_container {
+      flex-basis: 60%;
+      order: -1;
+    }
+    .speaker__profile {
+      margin-bottom: 0;
+      flex-basis: 20%;
+      order: 0;
+    }
+    .speaker__description {
+      min-height: 0%;
+
+      &__time {
+        align-self: flex-end;
+        flex-basis: 60%;
+        order: 1;
+        .time__icon {
+          display: inline-block;
+        }
+      }
+      &__about {
+        flex-basis: 40%;
+        order: 2;
+      }
+      &__title {
+        margin-top: 0.5rem;
+      }
+      &__paragraph {
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+}

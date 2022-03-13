@@ -1,0 +1,82 @@
+//Declaration des variables, resets, et éléments globaux
+
+$mainCta: #f72c4e;
+$color1: #2e2c3b;
+$color2: white;
+$color3: #f1eee9;
+$color3b: #d2c2b7; //variation de c3 sur le footer plus foncé
+$color4: #f9f9f9; //body background
+
+$widthDesktop: 65rem;
+$widthTablet: 60rem;
+$widthPhone: 30rem;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  //nécessaire pour mes pseudo éléments de background.
+}
+
+p,
+a,
+h2,
+h3,
+h4 {
+  font-family: "museo";
+  font-weight: 300;
+  color: $color1;
+}
+
+h2,
+h3 {
+  font-weight: 500;
+}
+
+.hidden {
+  display: none;
+}
+.break {
+  display: block;
+  clear: both;
+}
+.splitter {
+  background-color: #292828;
+  display: inline-block;
+  height: 0.8rem;
+  width: 2px;
+  &-fade {
+    background-color: #5e5e5d;
+  }
+  &-short {
+    width: 1px;
+    opacity: 0.5;
+  }
+}
+
+.triche {
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+.button_secondary {
+  cursor: pointer;
+  font-family: "maven";
+  font-variation-settings: "wght" 400;
+  color: $mainCta;
+  padding: 0.8rem;
+  border-radius: 2rem;
+  border: 2px solid $mainCta;
+  background: none;
+  text-transform: uppercase;
+  &:hover {
+    animation: pulse;
+    animation-duration: 0.5s;
+    background-color: $mainCta;
+    color: $color2;
+  }
+}

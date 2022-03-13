@@ -1,0 +1,261 @@
+/*@mixin backgroundOverflowFooter {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 50vw;
+  display: block;
+  background-color: $color1;
+  z-index: -10;
+}*/
+
+.footer {
+  color: $color2;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  background-color: $color1;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem 3rem;
+  padding: 5rem 0rem;
+  &::before {
+    @include backgroundOverflow;
+  }
+  h2,
+  h3 {
+    color: $color3b;
+  }
+  h4 {
+    color: $color2;
+  }
+  p,
+  a {
+    font-family: "maven";
+    color: $color2;
+  }
+  &__button {
+    height: 80px;
+    position: absolute;
+    display: block;
+    left: calc(50% - 14rem / 2);
+    top: -40px;
+
+    padding: 1.5rem 0.5rem;
+    width: 14rem;
+
+    cursor: pointer;
+    font-family: "maven";
+    font-variation-settings: "wght" 600;
+    font-size: 1.2rem;
+
+    border: none;
+    border-radius: 10rem;
+    background-color: $mainCta;
+    color: $color2;
+    box-shadow: 0 0 0 15px rgba(247, 44, 78, 0.3),
+      0 0 10px 22px rgba(247, 44, 78, 0.2);
+
+    transition: box-shadow 200ms;
+    &:hover {
+      box-shadow: 0 0 0 15px rgba(247, 44, 78, 0.5),
+        0 0 10px 22px rgba(247, 44, 78, 0.4);
+    }
+    //les logos paypal et cb
+    span {
+      color: $color2;
+      opacity: 0.7;
+      height: 1.2rem;
+      padding-left: 0.5rem;
+    }
+    //le 199$ en dessous du bouton
+    &::before {
+      padding-top: 0.2rem;
+      font-size: 0.8rem;
+      position: absolute;
+      content: "$199 USD";
+      background-color: $color1;
+      height: 30%;
+      width: 100px;
+      bottom: -30%;
+      left: calc(50% - 50px);
+      border-radius: 0 0 1rem 1rem;
+    }
+  }
+
+  &__convention {
+    display: flex;
+    justify-content: space-between;
+    &__picture {
+      padding-left: 2rem;
+      align-self: center;
+      img {
+        object-fit: contain;
+        width: 400px;
+      }
+    }
+    &__title {
+      margin: 0 0 0.8rem 0;
+    }
+    &__paragraph,
+    &__adress {
+      font-family: "maven";
+      font-variation-settings: "wght" 600;
+      font-style: normal;
+    }
+    &__paragraph {
+      margin-top: 0.4rem;
+      font-variation-settings: "wght" 200;
+      opacity: 0.8;
+      line-height: 1.6rem;
+    }
+    &__adress span {
+      display: none;
+    }
+  }
+
+  &__sponsors {
+    flex-basis: 100%;
+    ul {
+      padding: 0;
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  &__socials {
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px $color3 solid;
+    flex-basis: 38%;
+    padding: 1rem;
+    border-radius: 0.3rem;
+    ul {
+      flex-basis: 100%;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      list-style: none;
+      a {
+        font-variation-settings: "wght" 300;
+        padding-left: 2rem;
+        position: relative;
+        text-decoration: none;
+        vertical-align: center;
+        span {
+          //pas très propre, soit sortir le span du a, soit abuser des flexbox
+          position: absolute;
+          left: 0;
+          top: -0.2rem;
+          font-size: 1.5rem;
+        }
+      }
+      li {
+        margin-bottom: 1rem;
+      }
+    }
+    &__slack {
+      margin-right: 1rem;
+    }
+
+    h3 {
+      margin: 0;
+      flex-basis: 100%;
+    }
+  }
+  &__helpdesk {
+    flex-basis: 20%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 5rem;
+    h4 {
+      margin: 0;
+      flex-basis: 100%;
+    }
+    a {
+      font-variation-settings: "wght" 600;
+      text-decoration: none;
+    }
+    p {
+      margin: 0;
+      font-variation-settings: "wght" 200;
+      color: $color3b;
+    }
+  }
+  &__copyright {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 20%;
+    align-items: center;
+    height: 5rem;
+    p {
+      margin: 0;
+      font-variation-settings: "wght" 500;
+    }
+    a {
+      font-variation-settings: "wght" 700;
+      text-decoration: none;
+    }
+    .copyright {
+      margin: 0;
+      color: $color3b;
+    }
+  }
+  @media (max-width: $widthTablet) {
+    gap: 2rem 1.5rem;
+    &__convention {
+      order: -2;
+      flex-basis: 60%;
+      &__picture {
+        display: none;
+      }
+    }
+    &__helpdesk {
+      flex-basis: 30%;
+      order: -1;
+    }
+    &__socials {
+      flex-grow: 1;
+    }
+  }
+  @media (max-width: $widthPhone) {
+    min-width: 20px;
+    margin: 0rem 1rem;
+    &__convention,
+    &__helpdesk,
+    &__socials,
+    &__copyright {
+      flex-basis: 100%;
+    }
+    &__convention {
+      &__adress {
+        border: 1px solid $color3b;
+        border-radius: 10rem;
+        text-align: center;
+        padding: 0.5rem;
+        span {
+          display: inline-block;
+          margin-right: 1rem;
+        }
+      }
+    }
+    &__copyright,
+    &__helpdesk {
+      align-content: flex-start;
+      .copyright {
+        flex-basis: 100%;
+      }
+      .speak_support {
+        flex-basis: 100%;
+      }
+    }
+    &__socials {
+      border-left: 0;
+      border-right: 0;
+      border-radius: 0;
+    }
+  }
+}
